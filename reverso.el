@@ -22,7 +22,7 @@
   (message "Downloading...")
   (make-directory reverso-binaries-folder t)
   (shell-command
-   (format "curl -o %s/reverso -OL https://github.com/LukinEgor/reverso/releases/download/0.0.1/reverso-0.0.1" reverso-binaries-folder))
+   (format "curl -o %s/reverso -OL https://github.com/LukinEgor/reverso/releases/download/0.0.2/reverso-0.0.2" reverso-binaries-folder))
   (shell-command
    (format "chmod +x %s/reverso" reverso-binaries-folder))
   (message "Done."))
