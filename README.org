@@ -1,0 +1,7 @@
+* Reverso context search inside emacs
+** Install
+#+begin_src elisp
+M-x reverso-install-binary
+#+end_src
+** Usage
+Select region and exec `reverso-search`
