@@ -30,6 +30,8 @@
 
 ;;;###autoload
 (defun reverso-install-binary ()
+  "Download reverso cli binary"
+  (interactive)
   (let* ((latest-binary-url (reverso--detect-latest-binary-url))
         (latest-version (nth 7 (split-string latest-binary-url "/"))))
     (message
@@ -57,11 +59,13 @@
 
 ;;;###autoload
 (defun reverso-direct-search (start end)
+  "Reverso search on source lang"
   (interactive "r")
   (reverso-search start end reverso-default-source-lang reverso-default-target-lang))
 
 ;;;###autoload
 (defun reverso-reverse-search (start end)
+  "Reverso search on target lang"
   (interactive "r")
   (reverso-search start end reverso-default-target-lang reverso-default-source-lang))
 
