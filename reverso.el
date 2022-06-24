@@ -1,5 +1,3 @@
-(provide 'reverso)
-
 (defgroup reverso nil
   "An Emacs interface for Reverso Context."
   :group 'tools
@@ -66,3 +64,5 @@
 (defun reverso-reverse-search (start end)
   (interactive "r")
   (reverso-search start end reverso-default-target-lang reverso-default-source-lang))
+
+(provide 'reverso)
