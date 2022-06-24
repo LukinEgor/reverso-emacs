@@ -1,7 +1,27 @@
 * Reverso context search inside emacs
 ** Install
+*** Doom emacs
+1. Add package to =packages.el=:
 #+begin_src elisp
-M-x reverso-install-binary
+(package! reverso :recipe (:repo "https://github.com/LukinEgor/reverso-emacs"))
 #+end_src
-** Usage
-Select region and exec `reverso-search`
+
+2. Exec `M-x doom/reload`
+
+3. Download reverso-cli by `M-x reverso-install-binary`
+
+4. Set source and target languages:
+#+begin_src elisp
+(after! reverso
+  (setq reverso-default-source-lang "english")
+  (setq reverso-default-target-lang "russian"))
+ #+end_src
+
+5. Add shortcuts:
+#+begin_src elisp
+(after! reverso
+  (map! :leader
+        :prefix "k"
+        :desc "reverso-direct-search" "d" #'reverso-direct-search
+        :desc "reverso-reverse-search" "r" #'reverso-reverse-search))
+#+end_src
