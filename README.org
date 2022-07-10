@@ -6,9 +6,9 @@
 (package! reverso :recipe (:repo "https://github.com/LukinEgor/reverso-emacs"))
 #+end_src
 
-- Exec `M-x doom/reload`
+- Exec ~M-x doom/reload~
 
-- Download reverso-cli by `M-x reverso-install-binary`
+- Download reverso-cli by ~M-x reverso-install-binary~
 
 - Set source and target languages:
 #+begin_src elisp
